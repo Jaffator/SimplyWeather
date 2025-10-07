@@ -169,6 +169,7 @@ function getCityandRestAddress(resolveAddress: string): { city: string; restAddr
 }
 
 function setForecastCard(data: apiWeatherData) {
+  htmlElements.cardForecast?.querySelectorAll(".card-container").forEach((dot) => dot.remove());
   for (const [i, val] of data.days.entries()) {
     if (i === 11) break;
     if (i === 0) continue;
