@@ -8,7 +8,7 @@
   background: transparent;
   transition: background 1s ease;
   opacity: 0;
-  animation: fadeInBg 2s forwards;
+  animation: fadeInBg 3s forwards;
 }
 @keyframes fadeInBg {
   to {
