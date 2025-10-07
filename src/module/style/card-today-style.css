@@ -1,0 +1,66 @@
+:root {
+  --freeze: linear-gradient(90deg, rgba(63, 63, 63, 0.3) 30%, rgba(0, 98, 226, 0.5) 100%);
+  --colder: linear-gradient(90deg, rgba(63, 63, 63, 0.3) 30%, rgba(42, 199, 247, 0.5) 100%);
+  --cold: linear-gradient(90deg, rgba(63, 63, 63, 0.3) 30%, rgba(0, 231, 135, 0.5) 100%);
+  --warmer: linear-gradient(90deg, rgba(63, 63, 63, 0.3) 30%, rgba(2, 219, 67, 0.493) 100%);
+  --warm: linear-gradient(90deg, rgba(63, 63, 63, 0.3) 30%, rgba(252, 227, 0, 0.5) 100%);
+  --hot: linear-gradient(90deg, rgba(63, 63, 63, 0.3) 30%, rgba(255, 145, 2, 0.8) 100%);
+  --bg-today: var(--warm);
+}
+.card-container-today {
+  display: flex;
+  height: 180px;
+
+  width: 50vh;
+  border-radius: 20px;
+  padding: 0.5rem;
+  background: var(--bg-today);
+  opacity: 0;
+  animation: fadeInBg 2s forwards;
+}
+@keyframes fadeInBg {
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 760px) {
+  .card-container-today {
+    width: 42vh;
+  }
+}
+
+.card-temp-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  text-align: left;
+}
+.card-temp-container > * {
+  margin: 0;
+}
+.card-actual-temp {
+  font-size: 60px;
+  font-weight: bold;
+  margin-top: -10px;
+}
+.card-actual-date {
+  font-size: 12px;
+}
+.card-actual-content {
+  padding: 10px;
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-actual-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+}

@@ -1,0 +1,112 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#search-btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid rgba(114, 114, 114, 0.87);
+  border-radius: 4px;
+  padding: 5px 10px;
+  color: rgba(182, 182, 182, 0.87);
+}
+#city-input {
+  background-color: transparent;
+  border: 1px solid rgba(114, 114, 114, 0.87);
+  border-radius: 4px;
+  padding: 5px 10px;
+  color: rgba(182, 182, 182, 0.87);
+  outline: none;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 20px;
+  padding: 20px;
+}
+.cards {
+  /* visibility: hidden; */
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.forecast-container {
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+  align-items: center;
+}
+.navbtn {
+  color: rgba(102, 102, 102, 0.8);
+  font-size: 30px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.navbtn:hover {
+  background-color: rgba(44, 44, 44, 0.8);
+}
+.pointers {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  transform: translateY(-8px);
+}
+.dot {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background-color: rgba(88, 88, 88, 0.8);
+}
+.dot.active {
+  background-color: rgba(141, 141, 141, 0.8);
+}
+.card-forecast {
+  height: 210px;
+  width: 50vh;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0px;
+  background: rgba(44, 44, 44, 0.8);
+  transition: background 1s ease;
+  opacity: 0;
+  animation: fadeInBg 1s forwards;
+  overflow: hidden;
+}
+@media (max-width: 760px) {
+  .card-forecast {
+    width: 35vh;
+  }
+}
+
+.track {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 1.4s ease;
+}
+@keyframes fadeInBg {
+  to {
+    opacity: 1;
+  }
+}
